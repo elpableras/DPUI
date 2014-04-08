@@ -16,7 +16,7 @@ The page detected in the browser by the user location, if the language is Spanis
 
 HttpFilter
 Intercept the invocation of the servlet BEFORE it is invoked servlet itself. 
-I used for access control of authenticated users, because examine and modify the request before it reaches the servlet and also modify the response and redirect.
+I used for access control of authenticated users, because examine and modify the request before it reaches the servlet and also modify the response and redirect. 
 
 
 
