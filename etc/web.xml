@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    id="Your_WebApp_ID"
+    version="2.5">
+    
+	<display-name>Prototipo MIW para DPIU</display-name>
+	<description>
+		Practica de la asignatura DPIU de MIW impartida en la EII.
+	</description>
+
+	<!-- Pagina de entrada por defecto -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- Etiqueta de PIE -->
+	<taglib>
+		<taglib-uri>pablo.copyright</taglib-uri>
+		<taglib-location>/WEB-INF/copyright.tld</taglib-location>
+	</taglib>
+
+	<!-- Servlet Login -->
+	<servlet>
+		<servlet-name>login</servlet-name>
+		<servlet-class>com.miw.pablo.servlet.LoginServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- FILTRO ACCESO -->
+	<filter>
+		<filter-name>ControlAcceso</filter-name>
+		<filter-class>com.miw.pablo.filter.LoginFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>ControlAcceso</filter-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</filter-mapping>
+
+</web-app>

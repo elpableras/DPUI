@@ -1,0 +1,135 @@
+/* Pablo González Jiménez */
+
+/* ==========================================================================
+   CSS DE LOS ELEMENTOS DE LAS PÁGINAS
+   ========================================================================== */
+   
+body {
+font-family: arial, sans-serif;
+font-size: 100%;
+padding:0; 
+margin:0;
+font-size: 0.8em;
+max-width: 1024px; 
+margin: 0 auto;
+}
+
+*, html { line-height: 1.6em; margin:0;
+	padding:0;}
+
+.sidebar a, article a, header a, footer a { color: #69F; }
+
+a:visited {
+color: #BF9412;
+}
+
+#languages
+{
+margin: 0;
+padding: 0;
+height: 22px;
+font: 10px Verdana, sans-serif;
+width: 100%;
+list-style-type: none;
+}
+
+#langlist li
+{
+float: right;
+margin: 0;
+padding: 0;
+width: auto;
+padding-left: 5px;
+padding-right: 5px;
+display: block;
+border: 1px;
+}
+
+/*----- estilos visual de <header> --------*/
+header {
+	padding: 1em 0;
+	margin: 0px;
+	float: left;
+	width: 100%;
+}
+header h1{
+	color:#ffc000;
+}
+
+
+/*----- estilos visual de <nav> --------*/
+nav {
+	display: block;
+	margin: 0 0 2em;
+	padding: 0px;
+	float: left;
+	width: 100%;
+	background-color: #cc0000;
+}
+	
+nav ul {
+	padding: 0;
+	list-style: none;
+	position: relative;
+	display: inline-table;
+	z-index: 9999;
+	margin: 0px;
+	float: left;
+	width: 100%;
+}
+nav ul:after {content: ""; clear: both; display: block;}
+
+nav ul li {float: left;}
+
+nav ul li:hover a {color: #ffc000;}
+
+nav ul li a {
+	display: block;
+	padding: 1em;
+	font-size: 1.6em;
+	color: #ffdf7f;
+	background-color: #cc0000;
+}
+
+nav ul li p {
+	display: block;
+	padding: 1em;
+	font-size: 1.6em;
+	color: #ffc000;
+	background-color: #cc0000;
+}
+
+/*----- estilos visual de <aside class='sidebar'> --------*/
+aside.sidebar { width: 20%; float:right; text-align:justify;}
+aside.sidebar ul {
+	width:100%;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	list-style: none;
+}
+aside.sidebar ul li {
+	width:100%;
+	margin: 0px 0px 2em;
+	padding: 0px;
+	float: left;
+	list-style: none;
+}
+
+/*----- estilos visual de <section class='content'> --------*/
+section.content { width: 70%; float:left; }
+section.content-econo { width: 100%; float:left;}
+.content article { width:100%; float:left; padding: 0 0 1em; margin: 0 0 1em; border-bottom: 1px solid #ddd; }
+.entry.post-content { font-size: 1.125em; margin:0; padding:0; text-align:justify;}
+.bloqueArticle{text-align:center;}
+
+/*----- estilos visual de <footer> --------*/
+footer {
+	width: 98%;
+	float:left;
+	padding: 1%;
+	color:#fff;
+	background-color: #cc0000;
+	margin-top: 2em;
+	text-align:center
+}
